@@ -1,0 +1,204 @@
+@import "../ASSETS/font icons/fonts.css";
+.header {
+    position: relative;
+    background: black;
+    color: white;
+    text-align: center;
+}
+.warp {
+    display: flex;
+    /* justify-content: center;
+    align-items: center; */
+}
+.warpContent {
+    /* display: 1; */
+    width: 100%;
+}
+.title {
+    display: inline-block;
+    position: relative;
+    height: 80px;
+    line-height: 80px;
+}
+.logo {
+    float: right;
+    width: 64px;
+    height: 64px;
+    padding: 8px 0;
+}
+.sidebar {
+    flex: 0 0 200px;
+    width: 200px;
+    padding: 20px;
+    white-space: nowrap;
+    height: 600px;
+    background: red;
+}
+.content {
+    margin: 20px;
+    color: black;
+    background: darkgray;
+}
+.contentHeader {
+    height: 80px;
+    margin: 20px 0;
+    display: flex;
+    margin: 20px;
+}
+.contentblock {
+    flex: 1;
+    margin-right: 20px;
+    background: chartreuse;
+}
+.contenTab {
+    display: flex;
+    height: 50px;
+    justify-content: center;
+    align-items: center;
+    margin: 20px;
+}
+.contenTabLeft {
+    flex: 0 0 300px;
+    width: 300px;
+    background-color: orange;
+    display: flex;
+    /* justify-content: center;
+    align-items: center; */
+    text-align: center
+}
+/* .contentTabWrap {
+    flex: 1;
+} */
+.contentTabItem {
+    flex: 1;
+    padding: 10px;
+    border-right: 1px red solid;
+}
+.contentTabItem:last-child {
+    border-right: none
+}
+.contenTabMid {
+    flex: 10;
+    margin-left: 20px;
+}
+.contenTabMidInput {
+    height: 30px;
+    width: 200px;
+}
+.contenTabRight {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    /* align-items: flex-end; */
+    background: darkcyan
+}
+.contenTabRightItem {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    background-image: url(../logo.svg);
+    background-size: 30px 30px;
+    background-repeat: no-repeat;
+    margin-right: 20px;
+}
+.contentDetailItem {
+    height: 100px;
+    display: flex;
+    background: white;
+    margin: 20px;
+    /* text-align: center; */
+}
+.detailIcon {
+    flex: 0 0 100px;
+    width: 100px;
+    height: 100px;
+    margin-right: 10px;
+}
+.detailIconImg {
+    width: 80px;
+    height: 80px;
+}
+.icon-id-card {
+    font-size: 80px;
+}
+
+.detailContent {
+    flex: 1;
+}
+.detailContentUp {
+    display: flex;
+    height: 30px;
+    line-height: 30px;
+    padding: 10px;
+}
+.detailName {
+    flex: 4;
+}
+.detailType {
+    flex: 1;
+    text-align: center;
+    background: green;
+    margin: 0 100px;
+}
+.detailUrl {
+    flex: 2;
+}
+.detailFile {
+    flex: 2;
+}
+.detailTagarr {
+    /* height: 50px; */
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+.detailTagAdd {
+    flex: 0 0 50px;
+    width: 50px;
+    height: 50px;
+}
+.icon-plus {
+    /* display: inline-block; */
+    font-size: 50px;
+    /* font-size: 18px; */
+    text-align: center;
+    color: white;
+    background: blue;
+}
+.detailTagWarp {
+    flex: 1;
+}
+.detailTag {
+    /* display: inline-block; */
+    height: 50px;
+    line-height: 50px;
+    margin: 10px;
+    padding: 5px 10px;
+    background: #EFEFEF;
+}
+.detailTagType {
+    padding-right: 20px;
+}
+.detailDeny {
+    position: absolute;
+    right: 50px;
+    width: 80px;
+    height: 30px;
+    /* padding: 5px 10px; */
+    background: #00B4CF;
+}
+.detailDenyImg {
+    /* width: 50px;
+    height: 50px; */
+    /* padding-left: 20px; */
+}
+.icon-deny {
+    font-size: 14px;
+    padding: 5px 10px;
+}
+/* .icon-deny {
+    margin-left: 2px;
+    line-height: 24px;
+    font-size: 10px;
+} */
+

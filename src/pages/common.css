@@ -13,6 +13,7 @@
 .warpContent {
     /* display: 1; */
     width: 100%;
+    overflow: hidden;
 }
 .title {
     display: inline-block;
@@ -32,7 +33,21 @@
     padding: 20px;
     white-space: nowrap;
     height: 600px;
-    background: red;
+    background: #2D4054;
+    color: #00B4CF;
+}
+.sidebarItem {
+    /* color: #00B4CF; */
+    color: white;
+    height: 45px;
+    line-height: 45px;
+    cursor: pointer;
+}
+.sidebarItem:hover {
+    color: #00B4CF;
+}
+.sidebarItemName {
+    margin-left: 10px
 }
 .content {
     margin: 20px;
@@ -40,15 +55,60 @@
     background: darkgray;
 }
 .contentHeader {
-    height: 80px;
+    height: 100px;
+    /* line-height: 100px; */
     margin: 20px 0;
     display: flex;
     margin: 20px;
 }
+.contentblock:first-child {
+    background:yellow;
+}
+.contentblock:nth-child(2) {
+    background:#7FBC39;
+}
 .contentblock {
+    flex: 2;
+    width: 200px;
+    height: 80px;
+    /* line-height: 80px; */
+    margin: 20px 20px 0 0;
+    background: white;
+    position: relative;
+}
+.contentName {
+    position: absolute;
+    left: 10px;
+    top: 10px;
+}
+.contentNo {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+}
+.contentStatus {
     flex: 1;
-    margin-right: 20px;
-    background: chartreuse;
+    /* width: 200px; */
+    height: 80px;
+    /* line-height: 80px; */
+    margin: 20px 20px 0 0;
+    background: white;
+    position: relative;
+}
+.statusTop {
+    height: 30px;
+    line-height: 30px;
+    display: flex;
+    text-align: center;
+}
+.statusBottom {
+    height: 50px;
+    line-height: 50px;
+    display: flex;
+    text-align: center;
+}
+.all, .physical, .virtual {
+    flex: 1;
 }
 .contenTab {
     display: flex;
@@ -90,16 +150,20 @@
     display: flex;
     justify-content: center;
     /* align-items: flex-end; */
-    background: darkcyan
+    /* background: darkcyan */
+}
+.icon-th-card, .icon-th-list {
+    font-size: 20px;
+    margin-right: 10px;
+    cursor: pointer;
+}
+.icon-th-card:hover, .icon-th-list:hover {
+    /* background: #00B4CF; */
+    color: #00B4CF;
 }
 .contenTabRightItem {
-    display: inline-block;
-    width: 30px;
     height: 30px;
-    background-image: url(../logo.svg);
-    background-size: 30px 30px;
-    background-repeat: no-repeat;
-    margin-right: 20px;
+    line-height: 30px;
 }
 .contentDetailItem {
     height: 100px;
@@ -112,6 +176,7 @@
     flex: 0 0 100px;
     width: 100px;
     height: 100px;
+    line-height: 100px;
     margin-right: 10px;
 }
 .detailIconImg {
@@ -120,53 +185,65 @@
 }
 .icon-id-card {
     font-size: 80px;
+    vertical-align: middle;
 }
 
 .detailContent {
     flex: 1;
+    overflow: hidden;
 }
 .detailContentUp {
     display: flex;
     height: 30px;
     line-height: 30px;
-    padding: 10px;
+    padding: 10px 0;
 }
 .detailName {
     flex: 4;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 .detailType {
     flex: 1;
     text-align: center;
     background: green;
     margin: 0 100px;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 .detailUrl {
     flex: 2;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin-right: 20px;
 }
 .detailFile {
     flex: 2;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 .detailTagarr {
     /* height: 50px; */
     display: flex;
-    align-items: center;
+    align-items: baseline;
     position: relative;
+    margin-right: 30px;
 }
 .detailTagAdd {
-    flex: 0 0 50px;
+    /* flex: 0 0 50px;
     width: 50px;
-    height: 50px;
+    height: 50px; */
 }
 .icon-plus {
-    /* display: inline-block; */
-    font-size: 50px;
-    /* font-size: 18px; */
-    text-align: center;
+    font-size: 18px;
     color: white;
     background: blue;
+    padding: 4px;
 }
 .detailTagWarp {
-    flex: 1;
+    flex: 19;
+    overflow-x: scroll;
+    overflow-y: hidden;
 }
 .detailTag {
     /* display: inline-block; */
@@ -180,12 +257,16 @@
     padding-right: 20px;
 }
 .detailDeny {
-    position: absolute;
-    right: 50px;
+    /* position: absolute;
+    right: 50px; */
+    flex: 1;
     width: 80px;
     height: 30px;
+    line-height: 30px;
     /* padding: 5px 10px; */
     background: #00B4CF;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 .detailDenyImg {
     /* width: 50px;
@@ -201,4 +282,27 @@
     line-height: 24px;
     font-size: 10px;
 } */
-
+/* App.css */
+.openBtn {
+    /* margin-top: 240px; */
+    border: 1px solid dodgerblue;
+  }
+  
+  .dialog {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    padding: 30px 30px;
+    width: 200px;
+    height: 200px;
+    background-color: #fff;
+    border-radius: 8px;
+  }
+  
+  .closeBtn {
+    position: absolute;
+    right: 10px;
+    top: 4px;
+    font-size: 21px;
+  }

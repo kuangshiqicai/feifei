@@ -17,7 +17,8 @@ export default class Sidebar extends Component {
             {routes.map((val,index)=>{
                 return(
                 <div key={index}>
-                <Link to={val.path}>{val.authName}</Link>
+                <Link to={val.path} className='sidebarItem'>
+                  <i className={val.icon}></i><span className='sidebarItemName'>{val.authName}</span></Link>
                 </div>
                 )
             })

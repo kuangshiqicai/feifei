@@ -8,6 +8,7 @@
 // 自定义Modal使用页面
 import React, { Component } from 'react'
 import Modal from '../Modal/Modal'
+const response = require('../../../mock-server/db.json');
 class UserAdd extends Component {
   state={
     isShow:false,
@@ -19,6 +20,7 @@ class UserAdd extends Component {
     })
   }
   handleOk=()=>{
+    console.log('response', response)
     this.setState({
       isShow:false
     })
